@@ -27,7 +27,6 @@ def main():
     os.system(systemCommand)
     os.system("find . -type d -empty -delete")
 
-
 def fileCheck():
     if(os.path.isfile('./sourceLink.txt')):
         pass
@@ -103,7 +102,6 @@ def fileTypeCheck():
             fileType = input(">>")
             fileType = fileType.lower()
 
- 
             if fileType == 'i':
                 userBool = True
                 return " -r -A jpeg,jpg,png,gif"
@@ -129,13 +127,9 @@ def fileTypeCheck():
         elif userInput == 'n' or userInput == 'N':
             userBool = True
             return ""
-        
-    
-
 
 def clearScreen():
     os.system("clear")        
-
 
 main()
 
