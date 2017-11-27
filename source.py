@@ -22,7 +22,7 @@ def main():
 
     clearScreen()
     systemCommand = "wget -i sourceLink.txt" + fileTypeEx + \
-                    " -e robots=off --random-wait -U 'Mozzila/5.0 Firefox/14.0.1 Chrome/31.0.1' -nv --progress=dot"
+                    " -e robots=off --random-wait -U 'Mozzila/5.0 Firefox/14.0.1 Chrome/31.0.1' -nv -P ADPics -H"
 
     os.system(systemCommand)
     os.system("find . -type d -empty -delete")
@@ -104,7 +104,7 @@ def fileTypeCheck():
 
             if fileType == 'i':
                 userBool = True
-                return " -r -A jpeg,jpg,png,gif"
+                return " -r -A.jpeg,.jpg,.png,.gif"
             elif fileType == 'p':
                 userBool = True
                 return " -r -A pdf"
